@@ -6,6 +6,7 @@
         "bootstrap-sass": "latest",
         "font-awesome": "latest",
 		"html5shiv": "latest",
-        "respond": "latest"
+        "respond": "latest",
+		"include-media": "latest"
     }
 }
