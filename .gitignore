@@ -1,3 +1,9 @@
+node_modules/
+.sass-cache
+.sass-cache
+dploy.yaml
+catalog/view/libs/
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
