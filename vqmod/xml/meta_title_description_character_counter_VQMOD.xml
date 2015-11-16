@@ -1,0 +1,157 @@
+<modification>
+ <id>Arata TVA inclus in pagina produsului</id>
+ <version>
+  <![CDATA[1]]>
+ </version>
+ <vqmver>
+  <![CDATA[2.5.0]]>
+ </vqmver>
+ <author>
+  <![CDATA[<a href="http://youonline.ro" target="_blank">YouOnline.ro</a>]]>
+ </author>
+ 
+ 	<!-- Meta Tag Title and Meta Description in admin product page -->
+    <file path="admin/view/template/catalog/" name="product_form.tpl">
+        <operation error="skip">
+            <search position="before"><![CDATA[<?php echo $footer; ?>]]></search>
+            <add><![CDATA[<script language="javascript">
+				function max_title(input) {
+				total = 67;
+				tam = 0;
+				lista = document.getElementsByName('product_description[<?php echo $language['language_id']; ?>][meta_title]');
+
+				for (i=0; i<lista.length; i++)
+				  tam += lista[i].value.length;
+				meta = total - tam;
+					if (meta >= 1){
+						title_remain.innerHTML = "<font color='green'> "+meta+" chars left</font>";
+					} else {
+					title_remain.innerHTML = "<font color='red'> "+meta+" chars left.</font>";
+					}
+				}
+				function max_descr(txtarea) {
+				total = 156;
+				tam = 0;
+				lista = document.getElementsByName('product_description[<?php echo $language['language_id']; ?>][meta_description]');
+
+				for (i=0; i<lista.length; i++)
+				  tam += lista[i].value.length;
+				meta = total - tam;
+					if (meta >= 1){
+						descr_remain.innerHTML = "<font color='green'> "+meta+" chars left</font>";
+					} else {
+					descr_remain.innerHTML = "<font color='red'> "+meta+" chars left.</font>";
+					}
+				}
+				</script>]]>
+			</add>
+        </operation>
+		<operation>
+            <search position="replace"><![CDATA[<input type="text" name="product_description[<?php echo $language['language_id']; ?>][meta_title]" value="<?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['meta_title'] : ''; ?>" placeholder="<?php echo $entry_meta_title; ?>" id="input-meta-title<?php echo $language['language_id']; ?>" class="form-control" />]]></search>
+            <add><![CDATA[<input onload="max_title(this)" onkeyup="max_title(this)" onkeypress="max_title(this)" name="product_description[<?php echo $language['language_id']; ?>][meta_title]" value="<?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['meta_title'] : ''; ?>" placeholder="<?php echo $entry_meta_title; ?>" id="input-meta-title<?php echo $language['language_id']; ?>" class="form-control" />
+			Google will truncate your <code>title</code> tag after ~67 chars. Try to keep your title under 67 chars. <span id="title_remain" class="counter"></span>]]></add>
+        </operation>
+		<operation>
+            <search position="replace"><![CDATA[<textarea name="product_description[<?php echo $language['language_id']; ?>][meta_description]" rows="5" placeholder="<?php echo $entry_meta_description; ?>" id="input-meta-description<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['meta_description'] : ''; ?></textarea>]]></search>
+            <add><![CDATA[<textarea onload="max_descr(this)" onkeyup="max_descr(this)" onkeypress="max_descr(this)" name="product_description[<?php echo $language['language_id']; ?>][meta_description]" rows="5" placeholder="<?php echo $entry_meta_description; ?>" id="input-meta-description<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($product_description[$language['language_id']]) ? $product_description[$language['language_id']]['meta_description'] : ''; ?></textarea>
+			The <code>meta</code> description will be limited to 156 chars. <span id="descr_remain" class="counter"></span>]]></add>
+        </operation>
+	</file>
+
+	<!-- Meta Tag Title and Meta Description in admin category page -->
+	<file path="admin/view/template/catalog/" name="category_form.tpl">
+        <operation error="skip">
+            <search position="before"><![CDATA[<?php echo $footer; ?>]]></search>
+            <add><![CDATA[<script language="javascript">
+				function max_title(input) {
+				total = 67;
+				tam = 0;
+				lista = document.getElementsByName('category_description[<?php echo $language['language_id']; ?>][meta_title]');
+
+				for (i=0; i<lista.length; i++)
+				  tam += lista[i].value.length;
+				meta = total - tam;
+					if (meta >= 1){
+						title_remain.innerHTML = "<font color='green'> "+meta+" chars left</font>";
+					} else {
+					title_remain.innerHTML = "<font color='red'> "+meta+" chars left.</font>";
+					}
+				}
+				function max_descr(txtarea) {
+				total = 156;
+				tam = 0;
+				lista = document.getElementsByName('category_description[<?php echo $language['language_id']; ?>][meta_description]');
+
+				for (i=0; i<lista.length; i++)
+				  tam += lista[i].value.length;
+				meta = total - tam;
+					if (meta >= 1){
+						descr_remain.innerHTML = "<font color='green'> "+meta+" chars left</font>";
+					} else {
+					descr_remain.innerHTML = "<font color='red'> "+meta+" chars left.</font>";
+					}
+				}
+				</script>]]>
+			</add>
+        </operation>
+		<operation>
+            <search position="replace"><![CDATA[<input type="text" name="category_description[<?php echo $language['language_id']; ?>][meta_title]" value="<?php echo isset($category_description[$language['language_id']]) ? $category_description[$language['language_id']]['meta_title'] : ''; ?>" placeholder="<?php echo $entry_meta_title; ?>" id="input-meta-title<?php echo $language['language_id']; ?>" class="form-control" />]]></search>
+            <add><![CDATA[<input onload="max_title(this)" onkeyup="max_title(this)" onkeypress="max_title(this)" name="category_description[<?php echo $language['language_id']; ?>][meta_title]" value="<?php echo isset($category_description[$language['language_id']]) ? $category_description[$language['language_id']]['meta_title'] : ''; ?>" placeholder="<?php echo $entry_meta_title; ?>" id="input-meta-title<?php echo $language['language_id']; ?>" class="form-control" />
+			Google will truncate your <code>title</code> tag after ~67 chars. Try to keep your title under 67 chars. <span id="title_remain" class="counter"></span>]]></add>
+        </operation>
+		<operation>
+            <search position="replace"><![CDATA[<textarea name="category_description[<?php echo $language['language_id']; ?>][meta_description]" rows="5" placeholder="<?php echo $entry_meta_description; ?>" id="input-meta-description<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($category_description[$language['language_id']]) ? $category_description[$language['language_id']]['meta_description'] : ''; ?></textarea>]]></search>
+            <add><![CDATA[<textarea onkeyup="max_descr(this)" onkeypress="max_descr(this)" name="category_description[<?php echo $language['language_id']; ?>][meta_description]" rows="5" placeholder="<?php echo $entry_meta_description; ?>" id="input-meta-description<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($category_description[$language['language_id']]) ? $category_description[$language['language_id']]['meta_description'] : ''; ?></textarea>
+			The <code>meta</code> description will be limited to 156 chars. <span id="descr_remain" class="counter"></span>]]></add>
+        </operation>
+	</file>
+	
+	<!-- Meta Tag Title and Meta Description in admin information page -->
+	<file path="admin/view/template/catalog/" name="information_form.tpl">
+        <operation error="skip">
+            <search position="before"><![CDATA[<?php echo $footer; ?>]]></search>
+            <add><![CDATA[<script language="javascript">
+				function max_title(input) {
+				total = 67;
+				tam = 0;
+				lista = document.getElementsByName('information_description[<?php echo $language['language_id']; ?>][meta_title]');
+
+				for (i=0; i<lista.length; i++)
+				  tam += lista[i].value.length;
+				meta = total - tam;
+					if (meta >= 1){
+						title_remain.innerHTML = "<font color='green'> "+meta+" chars left</font>";
+					} else {
+					title_remain.innerHTML = "<font color='red'> "+meta+" chars left.</font>";
+					}
+				}
+				function max_descr(txtarea) {
+				total = 156;
+				tam = 0;
+				lista = document.getElementsByName('information_description[<?php echo $language['language_id']; ?>][meta_description]');
+
+				for (i=0; i<lista.length; i++)
+				  tam += lista[i].value.length;
+				meta = total - tam;
+					if (meta >= 1){
+						descr_remain.innerHTML = "<font color='green'> "+meta+" chars left</font>";
+					} else {
+					descr_remain.innerHTML = "<font color='red'> "+meta+" chars left.</font>";
+					}
+				}
+				</script>]]>
+			</add>
+        </operation>
+		<operation>
+            <search position="replace"><![CDATA[<input type="text" name="information_description[<?php echo $language['language_id']; ?>][meta_title]" value="<?php echo isset($information_description[$language['language_id']]) ? $information_description[$language['language_id']]['meta_title'] : ''; ?>" placeholder="<?php echo $entry_meta_title; ?>" id="input-meta-title<?php echo $language['language_id']; ?>" class="form-control" />]]></search>
+            <add><![CDATA[<input onload="max_title(this)" onkeyup="max_title(this)" onkeypress="max_title(this)" name="information_description[<?php echo $language['language_id']; ?>][meta_title]" value="<?php echo isset($information_description[$language['language_id']]) ? $information_description[$language['language_id']]['meta_title'] : ''; ?>" placeholder="<?php echo $entry_meta_title; ?>" id="input-meta-title<?php echo $language['language_id']; ?>" class="form-control" />
+			Google will truncate your <code>title</code> tag after ~67 chars. Try to keep your title under 67 chars. <span id="title_remain" class="counter"></span>]]></add>
+        </operation>
+    	<operation>
+            <search position="replace"><![CDATA[<textarea name="information_description[<?php echo $language['language_id']; ?>][meta_description]" rows="5" placeholder="<?php echo $entry_meta_description; ?>" id="input-meta-description<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($information_description[$language['language_id']]) ? $information_description[$language['language_id']]['meta_description'] : ''; ?></textarea>]]></search>
+            <add><![CDATA[<textarea onload="max_descr(this)" onkeyup="max_descr(this)" onkeypress="max_descr(this)" name="information_description[<?php echo $language['language_id']; ?>][meta_description]" rows="5" placeholder="<?php echo $entry_meta_description; ?>" id="input-meta-description<?php echo $language['language_id']; ?>" class="form-control"><?php echo isset($information_description[$language['language_id']]) ? $information_description[$language['language_id']]['meta_description'] : ''; ?></textarea>
+			The <code>meta</code> description will be limited to 156 chars. <span id="descr_remain" class="counter"></span>]]></add>
+        </operation>
+	</file>
+	
+</modification>

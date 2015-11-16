@@ -1,0 +1,126 @@
+---------- Date: 2015-08-04 19:00:33 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product&token=826a7ad96c400d80ec39a97d2d5e321a
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\oc2\vqmod/xml/ultimate_seo.xml
+   id        : Ultimate Seo Package
+   version   : 1.0
+   vqmver    : 1.0.9
+   author    : orestius
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/boot/template/product/product.tpl] (SKIPPED)
+
+File Name    : admin/controller/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): public function insert() {
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-04 19:00:37 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/edit&token=826a7ad96c400d80ec39a97d2d5e321a&product_id=42
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\oc2\vqmod/xml/ultimate_seo.xml
+   id        : Ultimate Seo Package
+   version   : 1.0
+   vqmver    : 1.0.9
+   author    : orestius
+
+File Name    : admin/controller/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): public function insert() {
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-04 19:01:16 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=extension/module&token=826a7ad96c400d80ec39a97d2d5e321a
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\oc2\vqmod/xml/ultimate_seo.xml
+   id        : Ultimate Seo Package
+   version   : 1.0
+   vqmver    : 1.0.9
+   author    : orestius
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/boot/template/product/product.tpl] (SKIPPED)
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-04 19:05:45 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /admin/index.php?route=extension/module&token=826a7ad96c400d80ec39a97d2d5e321a
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\oc2\vqmod/xml/ultimate_seo.xml
+   id        : Ultimate Seo Package
+   version   : 1.0
+   vqmver    : 1.0.9
+   author    : orestius
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/boot/template/product/product.tpl] (SKIPPED)
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-04 19:06:05 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\oc2\vqmod/xml/ultimate_seo.xml
+   id        : Ultimate Seo Package
+   version   : 1.0
+   vqmver    : 1.0.9
+   author    : orestius
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/boot/template/product/product.tpl] (SKIPPED)
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\oc2\vqmod/xml/canonical-url.xml
+   id        : Canonical URL
+   version   : 1
+   vqmver    : 
+   author    : tr-opencart.com - Ersen16
+
+File Name    : catalog/controller/common/home.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->document->setTitle($this->config->get('config_title'));
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-04 19:06:05 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\oc2\vqmod/xml/canonical-url.xml
+   id        : Canonical URL
+   version   : 1
+   vqmver    : 
+   author    : tr-opencart.com - Ersen16
+
+File Name    : catalog/controller/common/home.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->document->setTitle($this->config->get('config_title'));
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-04 19:06:20 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\oc2\vqmod/xml/canonical-url.xml
+   id        : Canonical URL
+   version   : 1
+   vqmver    : 
+   author    : tr-opencart.com - Ersen16
+
+File Name    : catalog/controller/common/home.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->document->setTitle($this->config->get('config_title'));
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-04 19:12:00 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\oc2\vqmod/xml/quantity_control_for_OC_v2.0.ocmod.xml
+   id        : 
+   version   : 1.0
+   vqmver    : 
+   author    : sergey@oc-dev.ru
+VQModObject::parseMods - Could not resolve path for [catalog/controller/module/latest.php, catalog/controller/module/special.php, catalog/controller/module/bestseller.php] (SKIPPED)
+----------------------------------------------------------------------
+
+
+---------- Date: 2015-08-04 19:12:42 ~ IP : 127.0.0.1 ----------
+REQUEST URI : /
+MOD DETAILS:
+   modFile   : D:\OpenServer\domains\oc2\vqmod/xml/quantity_control_for_OC_v2.0.ocmod.xml
+   id        : 
+   version   : 1.0
+   vqmver    : 
+   author    : sergey@oc-dev.ru
+VQModObject::parseMods - Could not resolve path for [catalog/controller/module/latest.php, catalog/controller/module/special.php, catalog/controller/module/bestseller.php] (SKIPPED)
+----------------------------------------------------------------------
+
+

@@ -1,0 +1,96 @@
+// CENTERER
+
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+// CENTERER
+
+// REM rem/px mixin
+
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+  $px : ();
+  $rem: ();
+  
+  @each $value in $values {
+   
+    @if $value == 0 or $value == auto {
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+    
+    @else { 
+      $unit: unit($value);
+      $val: parseInt($value);
+      
+      @if $unit == "px" {
+        $px : append($px,  $value);
+        $rem: append($rem, ($val / 10 * 1rem));
+      }
+      
+      @if $unit == "rem" {
+        $px : append($px,  ($val * 10 * 1px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+  
+  #{$property}: $px;
+  #{$property}: $rem;
+}
+
+// rem/px mixin
+
+// link-colors
+
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+  color: $normal;
+  @if $visited {
+    &:visited {
+      color: $visited;
+    }
+  }
+  @if $focus {
+    &:focus {
+      color: $focus;
+    }
+  }
+  @if $hover {
+    &:hover {
+      color: $hover;
+    }
+  }
+  @if $active {
+    &:active {
+      color: $active;
+    }
+  }
+}
+
+// link-colors
+
+// hover-link
+
+@mixin hover-link {
+  text-decoration: none;
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
+
+// hover-link
